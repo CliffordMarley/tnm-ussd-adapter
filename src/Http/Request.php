@@ -12,7 +12,7 @@ class Request extends BaseRequest
 {
     const INITIAL = 1, RESPONSE = 2, RELEASE = 3, TIMEOUT = 4;
     public string $msisdn = '';
-    public $session;
+    public SessionInterface|Closure|null $session;
     public int $type;
     public string $message;
     public Session $trail;
